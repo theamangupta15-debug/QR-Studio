@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>Home | QR Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head><body data-page="home">
+<header id="site-header"></header>
+<main><div class="center home-center">
+
+  <div class="greeting-badge">
+    <span>Welcome back</span>
+  </div>
+  <h1>Hello <span class="name-line" id="who"></span></h1>
+  <p class="home-lead">Create high-resolution QR codes or decode files and camera feeds instantly.</p>
+
+  <!-- Interactive Dual Feature Cards -->
+  <div class="home-cards">
+    <!-- Generator Feature Card -->
+    <a href="generator.html" class="feature-card">
+      <div class="card-icon-bubble">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+      <h2>Generate QR</h2>
+      <p>Convert links, contacts, or raw text into custom downloadable PNG, JPG, or PDF codes.</p>
+      <div class="card-action-cue">
+        <span>Start creating</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
+
+    <!-- Scanner Feature Card -->
+    <a href="scanner.html" class="feature-card">
+      <div class="card-icon-bubble">
+        <i class="fa-solid fa-camera"></i>
+      </div>
+      <h2>Scan QR</h2>
+      <p>Drop image files, PDFs, paste screenshots with Ctrl+V, or scan live using your camera.</p>
+      <div class="card-action-cue">
+        <span>Open scanner</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
+  </div>
+
+  <p class="small"><a href="index.html?change">Not you? Change name</a></p>
+</div></main>
+<footer>Created by Aman Gupta
+<a href="https://github.com/theamangupta15-debug/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/aman-gupta-0036a7277/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></footer>
+<script>document.getElementById('who').textContent=localStorage.getItem('qr-name')||'';</script>
+</body></html>

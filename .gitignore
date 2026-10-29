@@ -1,0 +1,23 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local Server / Live Server Logs
+.live-server/
+*.log
+
+# Build / Dependency Artifacts (if you ever add bundlers or npm)
+node_modules/
+dist/
+package-lock.json
+
+# Environment / Secrets (good safety habit for future additions)
+.env
+.env.local

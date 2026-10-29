@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>Generator | QR Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head><body data-page="generator">
+<header id="site-header"></header>
+<main><section class="panel">
+<h1>QR code generator</h1>
+<p>Paste a link or type any text.</p>
+
+<div class="panel-grid">
+  <!-- Controls Side -->
+  <div class="panel-col controls-side">
+    <div class="row">
+      <input type="text" id="qrText" placeholder="https://example.com" aria-label="Link or text" autofocus>
+      <button class="btn" id="genBtn" type="button">Generate</button>
+    </div>
+    <p class="msg" id="msg" role="status"></p>
+    <div class="formats" role="radiogroup" aria-label="File format">
+      <label><input type="radio" name="fmt" value="png" checked><span>PNG</span></label>
+      <label><input type="radio" name="fmt" value="jpg"><span>JPG</span></label>
+      <label><input type="radio" name="fmt" value="pdf"><span>PDF</span></label>
+    </div>
+  </div>
+
+  <!-- Preview & Actions Side -->
+  <div class="panel-col preview-side">
+    <div class="qr-box" id="qrBox">Your QR code will appear here.</div>
+    <div class="actions">
+      <button class="btn" id="downloadBtn" type="button" disabled><i class="fa-solid fa-download"></i> Download PNG</button>
+      <button class="btn ghost" id="clearBtn" type="button">Clear</button>
+    </div>
+  </div>
+</div>
+
+</section></main>
+<footer>Created by Aman Gupta
+<a href="https://github.com/theamangupta15-debug/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/aman-gupta-0036a7277/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/generator.js"></script>
+</body></html>

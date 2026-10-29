@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>Scanner | QR Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head><body data-page="scanner">
+<header id="site-header"></header>
+<main><section class="panel">
+<h1>QR code scanner</h1>
+<p>Upload a JPG, PNG or PDF that contains a QR code.</p>
+
+<!-- Dual Mode Toggle Tab Bar: Upload File default -->
+<div class="modes-toggle" role="tablist">
+  <button type="button" class="mode-btn active" id="modeUpload" role="tab" aria-selected="true"><i class="fa-solid fa-file"></i> Upload File</button>
+  <button type="button" class="mode-btn" id="modeCamera" role="tab" aria-selected="false"><i class="fa-solid fa-camera"></i> Use Camera</button>
+</div>
+
+<div class="panel-grid">
+  <!-- Left Side: Interactive Scanners -->
+  <div class="panel-col scanner-side">
+    
+    <!-- Upload Drop Zone (Visible by default) -->
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" hidden>
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <span>Click or drop a JPG, PNG or PDF here</span>
+      <span class="clipboard-hint"><i class="fa-solid fa-lightbulb"></i> Press <strong>Ctrl+V</strong> to paste anytime</span>
+    </label>
+
+    <!-- Camera Feed Container (Hidden by default) -->
+    <div class="camera-container" id="cameraContainer" style="display: none;">
+      <video id="video" playsinline></video>
+      <div class="camera-overlay">
+        <div class="scan-target"></div>
+        <span class="scan-label">Scanning... Align QR Code in center</span>
+      </div>
+      <div class="camera-fallback" id="cameraFallback">
+        <i class="fa-solid fa-video-slash"></i>
+        <span>Camera access off or unavailable. Try Uploading.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right Side: Smart Display & Decoder Analysis -->
+  <div class="panel-col display-side">
+    <p class="msg" id="msg" role="status"></p>
+    
+    <div class="result-area">
+      <label for="result" class="result-label">Decoded Text</label>
+      <textarea id="result" readonly placeholder="The decoded text will appear here." aria-label="Decoded text"></textarea>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="copyBtn" type="button" disabled><i class="fa-solid fa-copy"></i> Copy</button>
+      <button class="btn" id="openBtn" type="button" disabled><i class="fa-solid fa-arrow-up-right-from-square"></i> Open website</button>
+      <button class="btn ghost" id="clearBtn" type="button">Clear</button>
+    </div>
+  </div>
+</div>   
+
+
+
+</section></main>
+<footer>Created by Aman Gupta
+<a href="https://github.com/theamangupta15-debug/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/aman-gupta-0036a7277/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="js/scanner.js"></script>
+</body></html>
